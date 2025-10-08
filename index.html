@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cryptosiders — Tes FOMO Crypto</title>
+  <meta name="description" content="Kuesioner sederhana untuk mengukur tingkat FOMO dalam investasi crypto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Beranda Cryptosiders">
+        <img src="logo.png" alt="Logo Cryptosiders" class="logo" />
+        <span class="brand-text">Cryptosiders</span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mainnav">
+        <span class="menu-bar"></span>
+      </button>
+      <nav id="mainnav" class="nav">
+        <a href="#hero">Home</a>
+        <a href="#quiz">FOMO Test</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Cek Level <span class="grad">FOMO</span> Kamu</h1>
+        <p>Jawab 9 pertanyaan singkat untuk melihat kecenderungan FOMO saat berinvestasi crypto—biar keputusan tetap rasional, bukan emosional.</p>
+        <a class="btn btn-primary" href="#quiz">Mulai Test</a>
+      </div>
+      <div class="hero-card">
+        <div class="stat">
+          <div class="stat-num" id="preview-score">0</div>
+          <div class="stat-label">Skor contoh</div>
+        </div>
+        <p class="muted">Hasil final akan muncul setelah Anda menyelesaikan kuesioner.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Form <span class="grad">FOMO</span></h2>
+        <p class="muted">Pilih salah satu opsi pada setiap pernyataan.</p>
+      </header>
+
+      <div class="note">
+        <strong>Skala jawaban:</strong>
+        <ul>
+          <li><b>STS</b> = Sangat tidak sesuai / tidak pernah</li>
+          <li><b>TS</b> = Tidak terlalu sesuai / kadang-kadang</li>
+          <li><b>SS</b> = Cukup sesuai / lumayan sering</li>
+          <li><b>S</b> = Sangat sesuai / sering sekali</li>
+        </ul>
+      </div>
+
+      <form id="fomo-form" class="card">
+        <!-- Questions -->
+        <div class="q">
+          <p>Saya merasa ketinggalan informasi tentang pasar crypto.</p>
+          <div class="scale" data-name="q1"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya merasa tertinggal mengikuti pasar crypto dibandingkan orang lain.</p>
+          <div class="scale" data-name="q2"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya khawatir melewatkan kejadian penting di pasar crypto.</p>
+          <div class="scale" data-name="q3"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya takut kehilangan peluang yang orang lain dapatkan di pasar crypto.</p>
+          <div class="scale" data-name="q4"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya merasa bersalah saat melewatkan peluang investasi di crypto.</p>
+          <div class="scale" data-name="q5"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya terus memikirkan peluang crypto yang sudah terlewat.</p>
+          <div class="scale" data-name="q6"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya merasa orang lain puas dengan peluang yang mereka dapatkan di pasar crypto.</p>
+          <div class="scale" data-name="q7"></div>
+        </div>
+
+        <div class="q">
+          <p>Saya ingin bisa ikut memahami obrolan orang lain soal pasar crypto.</p>
+          <div class="scale" data-name="q8"></div>
+        </div>
+
+        <div class="q">
+          <p>Saat sedang liburan, saya tetap memantau pasar crypto.</p>
+          <div class="scale" data-name="q9"></div>
+        </div>
+
+        <button type="button" id="calc" class="btn btn-primary wide">Lihat Hasil</button>
+
+        <div id="result" class="result card">
+          <div class="result-grid">
+            <div>
+              <h3>Skor Anda</h3>
+              <div class="big" id="score">0</div>
+            </div>
+            <div>
+              <h3>Tingkat</h3>
+              <div id="level" class="tag">—</div>
+            </div>
+          </div>
+          <p id="desc" class="muted"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Tentang <span class="grad">Aplikasi</span></h2>
+      </header>
+      <div class="card">
+        <p>Alat ini membantu mengukur kecenderungan <em>Fear of Missing Out (FOMO)</em> ketika berinvestasi crypto.
+        Hasilnya bukan diagnosis psikologis, melainkan panduan edukasi untuk meningkatkan disiplin, manajemen risiko,
+        dan pengambilan keputusan yang berbasis data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Kontak</h2>
+      </header>
+      <div class="card">
+        <p>Butuh kustomisasi atau ingin integrasi ke situs Anda? Email kami:
+          <a href="mailto:rsh.cryptosiders@gmail.com">rsh.cryptosiders@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap small">
+      <p>© 2025 Cryptosiders • Edukasi investasi crypto tanpa FOMO</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
